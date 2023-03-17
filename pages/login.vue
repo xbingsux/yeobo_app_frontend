@@ -75,8 +75,8 @@ export default {
   },
   methods: {
     async userLogin() {
-      console.log("Login Hello",this.email);
-      console.log("Login Hello",this.password);
+      // console.log("Login Hello",this.email);
+      // console.log("Login Hello",this.password);
       try {
         await this.$auth.loginWith('local', {
           data: { identifier: this.email, password: this.password },
@@ -84,7 +84,7 @@ export default {
         console.log("Try");
       } catch (e) {
         if (e.response) this.err = e.response.data.error.message
-        console.log("catch");
+        console.log("catch",this.err);
       }
     },
     required (v) {

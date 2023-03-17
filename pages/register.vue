@@ -107,6 +107,9 @@ export default {
                     email: this.email,
                     password: this.password,
                   })
+                  .then(res=>{
+                    window.location.href = "/login";
+                  })
                   this.success = true
                 } catch (e) {
                   if (e.response) this.err = e.response.data.error.message
