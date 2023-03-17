@@ -81,9 +81,18 @@ export default {
         await this.$auth.loginWith('local', {
           data: { identifier: this.email, password: this.password },
         })
+        .then(res=>{
+          console.log("res : ",res);
+        })
+        .catch(err=>{
+          console.log("err : ",err);
+        })
         console.log("Try");
       } catch (e) {
-        if (e.response) this.err = e.response.data.error.message
+        if (e.response) {
+          this.err = e.response.data.error.message
+        }
+        console.log("e :",e);
         console.log("catch",this.err);
       }
     },

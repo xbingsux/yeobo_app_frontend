@@ -47,7 +47,8 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:5001: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: process.env.STRAPI_URL || 'http://localhost:5001/api'
+    // baseURL: 'http://localhost:5001/api' || process.env.STRAPI_URL
+    baseURL: 'http://localhost:5001/api'
   },
   auth: {
     redirect:{
