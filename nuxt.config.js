@@ -41,12 +41,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/auth-next'
   ],
-  auth: {
-    // Options
-  },
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:5001: https://github.com/nuxt-community/axios-module/issues/308
     // baseURL: 'http://localhost:5001/api' || process.env.STRAPI_URL
     baseURL: 'http://150.95.26.160:5001/' //for server
   },
